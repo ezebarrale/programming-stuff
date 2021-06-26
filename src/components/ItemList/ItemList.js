@@ -3,18 +3,16 @@ import Item from "../Item/Item.js";
 
 const listStyles = {
   display: "flex",
-  justifyContent: "center"
+  justifyContent: "center",
 };
 
 function ItemList() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => {
-      fetch("https://60d67598307c300017a5f3e4.mockapi.io/api/articles")
-        .then((response) => response.json())
-        .then((json) => setItems(json));
-    }, 2000);
+    fetch("https://60d67598307c300017a5f3e4.mockapi.io/api/articles")
+      .then((response) => response.json())
+      .then((json) => setItems(json));
   });
 
   return (
