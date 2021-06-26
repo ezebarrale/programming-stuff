@@ -1,4 +1,4 @@
-.header-conteiner {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,10 +11,6 @@
 .header-img {
     width: 2vh;
     height: 2vh;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-top: 4px;
-    margin-bottom: 4px;
 }
 
 .title {
@@ -25,14 +21,15 @@
     color: gray;
 }
 
-#title2 {
+#title2,
+a:hover {
     color: brown;
 }
 
 .nav_bar li {
     display: inline-block;
     color: gray;
-    margin: 20px;
+    margin: 32px;
 }
 
 ul {
@@ -50,10 +47,4 @@ a:hover {
 
 li {
     font-size: 20px;
-}
-
-.btnClass {
-    background: #973535;
-    border-radius: 4px;
-    margin-left: 40px;
 }
