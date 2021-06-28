@@ -5,12 +5,12 @@
     padding: 30px 10%;
     background-color: #0B0C0D;
     width: 100%;
-    height: 20vh;
+    height: 16vh;
+    border-radius: 6px;
 }
 
 .header-img {
-    width: 2vh;
-    height: 2vh;
+    width: 2.2vh;
 }
 
 .title {
@@ -26,15 +26,21 @@ a:hover {
     color: brown;
 }
 
-.nav_bar li {
-    display: inline-block;
+.nav_bar {
+    display: flex;
+    flex-direction: row;
     color: gray;
     margin: 32px;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    list-style: none;
 }
 
 a {
@@ -47,4 +53,11 @@ a:hover {
 
 li {
     font-size: 20px;
+    margin-right: 50px;
+}
+
+.btnCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

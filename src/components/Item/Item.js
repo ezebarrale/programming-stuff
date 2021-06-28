@@ -5,7 +5,12 @@ import "./Item.css";
 const cardStyles = {
   textAlign: "center",
   fontSize: 20,
-  padding: 5
+  padding: 20
+};
+
+const contentStyles = {
+  height: "60px",
+  fontSize: "14px"
 };
 
 function Item({ max, min, img, title, price }) {
@@ -22,11 +27,11 @@ function Item({ max, min, img, title, price }) {
   };
 
   return (
-    <div className="ProductCard">
+    <div className="itemCard">
       <Card style={cardStyles}>
         <Image src={img} wrapped ui={false} />
         <Card.Content>
-          <Card.Header>{title}</Card.Header>
+          <Card.Header style={contentStyles}>{title}</Card.Header>
           <Card.Meta>
             <span className="price">{price}</span>
           </Card.Meta>

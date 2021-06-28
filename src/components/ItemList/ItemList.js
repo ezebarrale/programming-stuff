@@ -1,23 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Item from "../Item/Item.js";
 
 const listStyles = {
-  display: "flex",
-  justifyContent: "center",
+  display: "grid",
+  gridTemplateColumns: "repeat(4, 1fr)",
 };
 
-function ItemList() {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    fetch("https://60d67598307c300017a5f3e4.mockapi.io/api/articles")
-      .then((response) => response.json())
-      .then((json) => setItems(json));
-  });
-
+function ItemList({products}) {
   return (
-    <div style={listStyles} className="item-list">
-      {items.map((item, idx) => {
+    <div style={listStyles} className="itemList">
+      {products.map((item) => {
         return (
           <Item
             key={item.id}

@@ -25,10 +25,13 @@ function Header(props) {
           <li>
             <a href=".">Blog</a>
           </li>
-          <Button variant="outlined" size="large" color="red">
-            <img className="header-img" src={img} alt="cart" />
-          </Button>
+          
         </ul>
+        <div className="btnCart">
+            <Button variant="outlined" size="large" color="red">
+              <img className="header-img" src={img} alt="cart" />
+            </Button>
+          </div>
       </div>
     </div>
   );

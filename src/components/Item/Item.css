@@ -1,11 +1,22 @@
-.ProductCard {
+.itemCard {
     display: flex;
-    justify-content: space-evenly;
-    margin: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8vh;
     color: black;
+    min-width: 300px;
+}
+
+.ContadorContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .Contador {
-    display: inline-block;
     min-width: 80px;
+}
+
+.price {
+    font-size: 20px !important;
 }
