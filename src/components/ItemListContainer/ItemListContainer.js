@@ -28,12 +28,6 @@ function ItemListContainer({ mtch }) {
       .then((json) => setItems(json));
     }  
   }, [catId]);
-  
-  //useEffect(() => {
-  //  fetch("https://60d67598307c300017a5f3e4.mockapi.io/api/articles")
-  //    .then((response) => response.json())
-  //    .then((json) => setItems(json));
-  //}, []);
 
   return (
     <div style={itemListcardStyles} className="listContainer">
