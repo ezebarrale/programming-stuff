@@ -23,7 +23,7 @@ function ItemListContainer({ mtch }) {
       .then((response) => response.json())
       .then((json) => setItems(json));
     }else{
-      fetch(`https://60d67598307c300017a5f3e4.mockapi.io/api/articles?category=${catId}`)
+      fetch(`https://60d67598307c300017a5f3e4.mockapi.io/api/articles?categories=${catId}`)
       .then((response) => response.json())
       .then((json) => setItems(json));
     }  

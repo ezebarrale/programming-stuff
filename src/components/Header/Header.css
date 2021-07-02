@@ -5,7 +5,7 @@
     padding: 30px 10%;
     background-color: #0B0C0D;
     width: 100%;
-    height: 20vh;
+    height: 14vh;
     border-radius: 6px;
     margin-bottom: 40px;
 }
@@ -32,19 +32,44 @@ a:hover {
     flex-direction: row;
 }
 
-ul {
+.DropDown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 98px;
+}
+
+.nav_bar ul {
     display: flex;
     flex-direction: row;
     list-style: none;
 }
 
-.nav_bar ul a {
-    color: gray !important;
-    font-size: 20px;
+.nav_bar ul li {
     margin-right: 50px;
 }
 
-.nav_bar ul a:hover {
+.nav_bar ul li:hover .DropDown {
+    display: block;
+}
+
+.nav_bar ul li .DropDown {
+    display: none;
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+.nav_bar ul li .DropDown a {
+    display: flex;
+    padding: 4px;
+}
+
+.nav_bar ul li a {
+    color: gray !important;
+    font-size: 20px;
+}
+
+.nav_bar ul li a:hover {
     color: yellow !important;
 }
 

@@ -6,7 +6,7 @@
         "min": 0,
         "description": "The Famous best-seller shirt now available in black !",
         "id": "1",
-        "category": "1"
+        "categories": "1"
     },
     {
         "title": "IRON PHP SHORT SLEEVE TSHIRT",
@@ -16,7 +16,7 @@
         "min": 0,
         "description": "Clean, Fast and Powerful PHP web apps !",
         "id": "2",
-        "category": "1"
+        "categories": "1"
     },
     {
         "title": "CAPTAIN TS - HOODED SWEATSHIRT",
@@ -26,7 +26,7 @@
         "min": 0,
         "description": "Everyone needs a go-to, cozy sweatshirt to curl up in, so go for one that's soft, smooth, and stylish. It's also perfect for cooler evenings!",
         "id": "3",
-        "category": "2"
+        "categories": "2"
     },
     {
         "title": "AUTONOMOUS PINK - WOMEN HOODIE",
@@ -36,7 +36,7 @@
         "min": 0,
         "description": "A soft and comfy women hoodie that fits all your hoodie needs. The fleece fabric makes it a great partner all year round, be it a summer evening on the beach, or a Christmas dinner in a mountain cabin.",
         "id": "4",
-        "category": "2"
+        "categories": "2"
     },
     {
         "title": "AUTOMOUS PINK - SWEATSHIRT",
@@ -46,7 +46,7 @@
         "min": 0,
         "description": "A sturdy and warm sweatshirt bound to keep you warm in the colder months. A pre-shrunk, classic fit sweater that's made with air-jet spun yarn for a soft feel.",
         "id": "5",
-        "category": "2"
+        "categories": "2"
     },
     {
         "title": "BATJAVA SHORT SLEEVE TSHIRT UNISEX",
@@ -56,7 +56,7 @@
         "min": 0,
         "description": "BATJAVA can save almost every part of the Java source code !",
         "id": "6",
-        "category": "1"
+        "categories": "1"
     },
     {
         "title": "THAT IS CSS - SHORT SLEEVE T-SHIRT",
@@ -66,7 +66,7 @@
         "min": 0,
         "description": "For real CSS lovers only <3, you can solve any CSS problem, you're a real Hero !",
         "id": "7",
-        "category": "1"
+        "categories": "1"
     },
     {
         "title": "DEVHERO FACE MASK",
@@ -76,6 +76,6 @@
         "min": 0,
         "description": "This reusable face mask will fit you nicely thanks to its adjustable nose wire and elastic bands. Choose a design that will complement your style, as face masks are becoming the new trend.",
         "id": "8",
-        "category": "3"
+        "categories": "3"
     }
 ]
