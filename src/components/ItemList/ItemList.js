@@ -1,26 +1,25 @@
 import React from "react";
 import Item from "../Item/Item.js";
 
+//import { Link } from "react-router-dom";
+
 const listStyles = {
   display: "grid",
   gridTemplateColumns: "repeat(4, 1fr)",
+  marginTop: "40px",
 };
 
-function ItemList({products}) {
+function ItemList({ products }) {
   return (
     <div style={listStyles} className="itemList">
+      {" "}
       {products.map((item) => {
         return (
-          <Item
-            key={item.id}
-            title={item.title}
-            price={"$" + item.price}
-            img={item.img}
-            max={item.max}
-            min={item.min}
-          />
+          <div key={item.id}>
+            <Item data={item} />
+          </div>
         );
-      })}
+      })}{" "}
     </div>
   );
 }

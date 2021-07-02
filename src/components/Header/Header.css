@@ -5,8 +5,9 @@
     padding: 30px 10%;
     background-color: #0B0C0D;
     width: 100%;
-    height: 16vh;
+    height: 20vh;
     border-radius: 6px;
+    margin-bottom: 40px;
 }
 
 .header-img {
@@ -23,37 +24,28 @@
 
 #title2,
 a:hover {
-    color: brown;
+    color: yellow;
 }
 
 .nav_bar {
     display: flex;
     flex-direction: row;
-    color: gray;
-    margin: 32px;
 }
 
 ul {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-top: 60px;
-    padding-bottom: 60px;
     list-style: none;
 }
 
-a {
+.nav_bar ul a {
     color: gray !important;
-}
-
-a:hover {
-    color: brown !important;
-}
-
-li {
     font-size: 20px;
     margin-right: 50px;
+}
+
+.nav_bar ul a:hover {
+    color: yellow !important;
 }
 
 .btnCart {
