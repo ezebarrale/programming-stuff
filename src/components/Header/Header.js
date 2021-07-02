@@ -18,17 +18,17 @@ function Header(props) {
       <div className="nav_bar">
         <ul>
           <li>
-            <Link to="/">
+            <Link to="#">
               <p>ABOUT</p>
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="#">
               <p>BLOG</p>
             </Link>
           </li>
           <li>
-            <Link to="">
+            <Link to="#">
               <p>CATEGORIES</p>
             </Link>
             <ul className="DropDown">
