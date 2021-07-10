@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Card, Image, Button } from "semantic-ui-react";
+import React, {useContext} from "react";
+import { Card, Image } from "semantic-ui-react";
+import ItemCount from '../ItemCount/ItemCount.js';
 import "./Item.css";
-
+import { CartContext } from "../../context/CartContext.js";
 import { Link } from "react-router-dom";
 
 const cardStyles = {
@@ -16,17 +17,9 @@ const contentStyles = {
 };
 
 function Item({ data }) {
-  const [number, setNumber] = useState(0);
 
-  const hundleIncrement = () => {
-    //console.log("Hiciste click");
-    if (number < data.max) setNumber(number + 1);
-  };
-
-  const hundleDecrement = () => {
-    //console.log("Hiciste click");
-    if (number > data.min) setNumber(number - 1);
-  };
+  const { addToCart } = useContext(CartContext);
+  const onAdd = qty => addToCart(data, qty);
 
   return (
     <div className="itemCard">
@@ -43,20 +36,7 @@ function Item({ data }) {
           </Card.Content>
 
           <Card.Content>
-            <div className="ContadorContainer">
-              <Button size="small" onClick={hundleDecrement}>
-                <p className="less-plus"> - </p>
-              </Button>
-              <p className="Contador">{number}</p>
-              <Button size="small" onClick={hundleIncrement}>
-                <p className="less-plus"> + </p>
-              </Button>
-            </div>
-          </Card.Content>
-          <Card.Content>
-            <Button variant="outlined" size="large" color="yellow">
-              Add to cart
-            </Button>
+            <ItemCount onAdd={onAdd} stock={data.stock}/>
           </Card.Content>
         </Card>
     </div>

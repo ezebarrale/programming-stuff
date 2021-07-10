@@ -2,80 +2,72 @@
         "title": "CAPTAIN JS T-SHIRT BLACK EDITION",
         "price": 150,
         "img": "https://cdn.shopify.com/s/files/1/2332/2113/products/unisex-basic-softstyle-t-shirt-black-60083859c7db4_1024x1024.jpg?v=1611151455",
-        "max": 10,
-        "min": 0,
+        "stock": 10,
         "description": "The Famous best-seller shirt now available in black !",
         "id": "1",
-        "categories": "1"
+        "categories": "t-shirt"
     },
     {
         "title": "IRON PHP SHORT SLEEVE TSHIRT",
         "price": 150,
         "img": "https://cdn.shopify.com/s/files/1/2332/2113/products/devhero-ironphp-4K_devhero-logo-2-baseline-white-4K_mockup_Front_Flat_Red_1_1024x1024.jpg?v=1547929900",
-        "max": 12,
-        "min": 0,
+        "stock": 12,
         "description": "Clean, Fast and Powerful PHP web apps !",
         "id": "2",
-        "categories": "1"
+        "categories": "t-shirt"
     },
     {
         "title": "CAPTAIN TS - HOODED SWEATSHIRT",
         "price": 200,
         "img": "https://cdn.shopify.com/s/files/1/2332/2113/products/mockup-6947c7c5_1024x1024.jpg?v=1552903927",
-        "max": 4,
-        "min": 0,
+        "stock": 4,
         "description": "Everyone needs a go-to, cozy sweatshirt to curl up in, so go for one that's soft, smooth, and stylish. It's also perfect for cooler evenings!",
         "id": "3",
-        "categories": "2"
+        "categories": "hoodie"
     },
     {
         "title": "AUTONOMOUS PINK - WOMEN HOODIE",
         "price": 200,
         "img": "https://cdn.shopify.com/s/files/1/2332/2113/products/mockup-526f469b_1024x1024.jpg?v=1542143640",
-        "max": 6,
-        "min": 0,
+        "stock": 6,
         "description": "A soft and comfy women hoodie that fits all your hoodie needs. The fleece fabric makes it a great partner all year round, be it a summer evening on the beach, or a Christmas dinner in a mountain cabin.",
         "id": "4",
-        "categories": "2"
+        "categories": "hoodie"
     },
     {
         "title": "AUTOMOUS PINK - SWEATSHIRT",
         "price": 200,
         "img": "https://cdn.shopify.com/s/files/1/2332/2113/products/mockup-7577577f_1024x1024.jpg?v=1542143672",
-        "max": 16,
-        "min": 0,
+        "stock": 16,
         "description": "A sturdy and warm sweatshirt bound to keep you warm in the colder months. A pre-shrunk, classic fit sweater that's made with air-jet spun yarn for a soft feel.",
         "id": "5",
-        "categories": "2"
+        "categories": "hoodie"
     },
     {
         "title": "BATJAVA SHORT SLEEVE TSHIRT UNISEX",
         "price": 200,
         "img": "https://cdn.shopify.com/s/files/1/2332/2113/products/mockup-84ae3598_1024x1024.jpg?v=1591520335",
-        "max": 6,
-        "min": 0,
+        "stock": 6,
         "description": "BATJAVA can save almost every part of the Java source code !",
         "id": "6",
-        "categories": "1"
+        "categories": "t-shirt"
     },
     {
         "title": "THAT IS CSS - SHORT SLEEVE T-SHIRT",
         "price": 120,
         "img": "https://cdn.shopify.com/s/files/1/2332/2113/products/mockup-7c99fe2e_1024x1024.jpg?v=1544133422",
-        "max": 10,
-        "min": 0,
+        "stock": 10,
         "description": "For real CSS lovers only <3, you can solve any CSS problem, you're a real Hero !",
         "id": "7",
-        "categories": "1"
+        "categories": "t-shirt"
     },
     {
         "title": "DEVHERO FACE MASK",
-        "price": 525,
+        "price": 25,
         "img": "https://cdn.shopify.com/s/files/1/2332/2113/products/mockup-bd979ec2_1024x1024.jpg?v=1599924438",
-        "max": 20,
-        "min": 0,
+        "stock": 20,
         "description": "This reusable face mask will fit you nicely thanks to its adjustable nose wire and elastic bands. Choose a design that will complement your style, as face masks are becoming the new trend.",
         "id": "8",
-        "categories": "3"
+        "categories": "others"
     }
 ]

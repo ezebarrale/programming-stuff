@@ -1,10 +1,16 @@
 import img from "../../shopping-cart.png";
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "semantic-ui-react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import {CartContext} from '../../context/CartContext';
 
 function Header(props) {
+
+  const {cart} = useContext(CartContext);
+
+  const total = cart.length;
+
   return (
     <div className="header-container">
       <Link className="title" to="/">
@@ -32,24 +38,25 @@ function Header(props) {
               <p>CATEGORIES</p>
             </Link>
             <ul className="DropDown">
-              <Link to="/categories/1">
+              <Link to="/categories/t-shirt">
                 <p>T-SHIRT</p>
               </Link>
-              <Link to="/categories/2">
+              <Link to="/categories/hoodie">
                 <p>HOODIE</p>
               </Link>
-              <Link to="/categories/3">
+              <Link to="/categories/others">
                 <p>OTHERS</p>
               </Link>
             </ul>
           </li>
         </ul>
 
-        <div className="btnCart">
+        <Link to="/cart" className="btnCart">
           <Button variant="outlined" size="large" color="yellow">
             <img className="header-img" src={img} alt="cart" />
+            <span style={{color: "black"}}>{total}</span>
           </Button>
-        </div>
+        </Link>
       </div>
     </div>
   );
