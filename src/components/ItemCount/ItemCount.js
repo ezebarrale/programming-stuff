@@ -38,7 +38,7 @@ const ItemCount = ({ stock, onAdd }) => {
 
       {stock === 0 ? 
       (
-        <span>SIN STOCK</span> 
+        <span>OUT OF STOCK</span> 
       ):(
         <div>
           <div style={contadorStyles}>
