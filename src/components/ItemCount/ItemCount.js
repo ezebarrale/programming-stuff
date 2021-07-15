@@ -35,23 +35,31 @@ const ItemCount = ({ stock, onAdd }) => {
 
   return (
     <div className="ContadorContainer" style={contStyles}>
-      <div style={contadorStyles}>
-        <Button size="small" onClick={hundleDecrement}>
-          <p className="less-plus"> - </p>
-        </Button>
-        <p className="Contador" style={numStyles}>
-          {number}
-        </p>
-        <Button size="small" onClick={hundleIncrement}>
-          <p className="less-plus"> + </p>
-        </Button>
-      </div>
 
-      <div>
-        <Button onClick={() => onAdd(number)} content="Add to cart" icon="cart" size="big" color="yellow"/>
-      </div>
-    </div>
-  );
+      {stock === 0 ? 
+      (
+        <span>SIN STOCK</span> 
+      ):(
+        <div>
+          <div style={contadorStyles}>
+            <Button size="small" onClick={hundleDecrement}>
+              <p className="less-plus"> - </p>
+            </Button>
+            <p className="Contador" style={numStyles}>
+              {number}
+            </p>
+            <Button size="small" onClick={hundleIncrement}>
+              <p className="less-plus"> + </p>
+            </Button>
+          </div>
+          <div>
+            <Button onClick={() => onAdd(number)} content="Add to cart" icon="cart" size="big" color="yellow"/>
+          </div>
+        </div>
+      )}
+
+    </div>  
+  )
 }
 
 export default ItemCount;

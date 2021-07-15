@@ -20,7 +20,7 @@
         "title": "CAPTAIN TS - HOODED SWEATSHIRT",
         "price": 200,
         "img": "https://cdn.shopify.com/s/files/1/2332/2113/products/mockup-6947c7c5_1024x1024.jpg?v=1552903927",
-        "stock": 4,
+        "stock": 0,
         "description": "Everyone needs a go-to, cozy sweatshirt to curl up in, so go for one that's soft, smooth, and stylish. It's also perfect for cooler evenings!",
         "id": "3",
         "categories": "hoodie"
@@ -56,7 +56,7 @@
         "title": "THAT IS CSS - SHORT SLEEVE T-SHIRT",
         "price": 120,
         "img": "https://cdn.shopify.com/s/files/1/2332/2113/products/mockup-7c99fe2e_1024x1024.jpg?v=1544133422",
-        "stock": 10,
+        "stock": 0,
         "description": "For real CSS lovers only <3, you can solve any CSS problem, you're a real Hero !",
         "id": "7",
         "categories": "t-shirt"
