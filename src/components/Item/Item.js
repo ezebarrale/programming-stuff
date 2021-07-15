@@ -2,7 +2,9 @@ import React, {useContext} from "react";
 import { Card, Image } from "semantic-ui-react";
 import ItemCount from '../ItemCount/ItemCount.js';
 import "./Item.css";
+
 import { CartContext } from "../../context/CartContext.js";
+
 import { Link } from "react-router-dom";
 
 const cardStyles = {

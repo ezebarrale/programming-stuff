@@ -1,0 +1,7 @@
+.available {
+    color: black;
+}
+
+.noAvailable {
+    display: none;
+}

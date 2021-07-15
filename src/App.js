@@ -11,29 +11,30 @@ import ItemDetail from "./pages/ItemDetail/ItemDetail.js";
 import Cart from "./pages/Cart/Cart.js";
 
 import { CartProvider } from "./context/CartContext";
+import { ItemProvider } from "./context/ItemContext";
 
 function App() {
   return (
-    <CartProvider>
-      <Router>
-        <div className="App">
-          <Header title1={"Programming"} title2={"Stuff"} />
+    <ItemProvider>
+      <CartProvider>
+        <Router>
+          <div className="App">
+            <Header title1={"Programming"} title2={"Stuff"} />
 
-          <Switch>
-
-            <Route path="/" exact component={Home} />
-            <Route path="/item/:id" component={ItemDetail} />
-            <Route path="/categories/:categoryId" component={Home} />
-            <Route path="/cart" component={Cart} />
-            <Route path="*">
-              {" "}<h1>404 Not Found</h1>{" "}
-            </Route>
-            
-          </Switch>
-          <Footer />
-        </div>
-      </Router>
-    </CartProvider>
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/item/:id" component={ItemDetail} />
+              <Route path="/categories/:categoryId" component={Home} />
+              <Route path="/cart" component={Cart} />
+              <Route path="*">
+                <h1>404 Not Found</h1>
+              </Route>
+            </Switch>
+            <Footer />
+          </div>
+        </Router>
+      </CartProvider>
+    </ItemProvider>
   );
 }
 

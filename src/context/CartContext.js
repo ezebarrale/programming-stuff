@@ -3,6 +3,7 @@ import { createContext, useState } from "react";
 export const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
+
   const [cart, setCart] = useState([]);
 
   const clearCart = () => setCart([]);
@@ -37,12 +38,19 @@ export const CartProvider = ({ children }) => {
       total = item.price * item.quantity + cont;
       return total;
     }, 0);
-    console.log(total);
+  };
+
+  const totalItems = () => {
+    let total = 0;
+    cart.reduce((cont, item) => {
+      total = item.price * item.quantity + cont;
+      return total;
+    }, 0);
   };
 
   return (
     <CartContext.Provider
-      value={{ cart, setCart, clearCart, addToCart, removeToCart, totalToPay }}
+      value={{ cart, setCart, clearCart, addToCart, removeToCart, totalToPay, totalItems }}
     >
       {children}
     </CartContext.Provider>
