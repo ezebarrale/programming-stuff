@@ -6,3 +6,7 @@
     color: whitesmoke;
     margin: 20px;
 }
+
+.App-body {
+    min-height: calc(100vh - 360px);
+}

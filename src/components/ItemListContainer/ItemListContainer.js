@@ -24,21 +24,11 @@ function ItemListContainer({ mtch }) {
     })()
   }, [catId]);
 
-  /*
-  useEffect(() => {
-      fetch(
-        catId === undefined ? "https://60d67598307c300017a5f3e4.mockapi.io/api/articles" : `https://60d67598307c300017a5f3e4.mockapi.io/api/articles?categories=${catId}`
-        )
-      .then((response) => response.json())
-      .then((json) => setItems(json));
-  }, [catId]);
-  */
-
   return (
     <div style={itemListcardStyles} className="listContainer">
-      <h2>
+      <h1>
         <code>Trending now ...</code>
-      </h2>
+      </h1>
       <ItemList products={articles} />
     </div>
   );

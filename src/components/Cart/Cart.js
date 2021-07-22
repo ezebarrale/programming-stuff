@@ -2,20 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-
-const listStyle = {
-  fontSize: "28px",
-  padding: "20px",
-};
-
-const liStyle = {
-  padding: "20px",
-  textAlign: "left",
-};
-
-const iStyle = {
-  display: "flex",
-};
+import './Cart.css';
 
 const btnStyle = {
   margin: "40px",
@@ -40,18 +27,26 @@ function Cart() {
 
   return (
     <div>
+
       <h1>
-        <code>your SHOPPING CART</code>
+        <code>YOUR SHOPPING CART</code>
       </h1>
-      <ul style={listStyle}>
-        {cart.map((item) => {
+
+      {total === 0 ? (
+        <h1 className="noProd">No products in cart ...</h1>
+      ) : (
+        <ul className="listStyle">
+         {cart.map((item) => {
           return (
-            <div style={iStyle} key={item.id}>
-              <li style={liStyle}>
-                <span>{item.title}</span>
-                <span> x {item.quantity}</span>
-                <span> : ${item.price} p/u</span>
-              </li>
+            <div key={item.id} className="iStyle">
+              <div className="listCont">
+                <li className="liStyle">
+                  <span>{item.title}</span>
+                  <span> x {item.quantity}</span>
+                  <span> : ${item.price} p/u</span>
+                </li>
+              </div>
+              
               <Button
                 style={btnDeleteStyle}
                 onClick={() => remove(item.id)}
@@ -60,15 +55,11 @@ function Cart() {
                 color="yellow"
               />
             </div>
-          );
-        })}
-      </ul>
-
-      {total === 0 ? (
-        <h1>No products in cart ...</h1>
-      ) : (
-        <h2>Total to pay ${total}</h2>
+            );
+          })}
+        </ul>       
       )}
+
       {total === 0 ? (
         <div style={btnStyle}>
           <Link to="/">
@@ -76,16 +67,26 @@ function Cart() {
           </Link>
         </div>
       ) : (
-        <div style={btnStyle}>
-          <Button content="PAY" size="big" color="yellow" />
-          <Button
-            onClick={() => clear()}
-            content="CLEAN"
-            size="big"
-            color="yellow"
-          />
+        <div>
+
+          <h2>Total to pay ${total}</h2>
+
+          <div style={btnStyle}>
+            <Link to="/checkout">
+              <Button content="PAY" size="big" color="yellow"/>
+            </Link>
+            
+            <Button
+              onClick={() => clear()}
+              content="CLEAN"
+              size="big"
+              color="yellow"
+            />
+          </div>
         </div>
+        
       )}
+
     </div>
   );
 }

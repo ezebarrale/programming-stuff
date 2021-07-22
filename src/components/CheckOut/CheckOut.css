@@ -1,0 +1,32 @@
+.content-checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirm-checkout,
+.steps-checkout {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.steps-content {
+    min-height: 400px;
+}
+
+.formInfo,
+.purchaseId {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.ulStyleConfirm {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.listStyleConfirm {
+    padding: 20px;
+    font-size: 28px;
+    list-style: none;
+}
