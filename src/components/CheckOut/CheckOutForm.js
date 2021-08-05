@@ -9,11 +9,20 @@ const CheckOutForm = ({ addPurchaseInfo }) => {
         email: ''
     };
     const [values, setValues] = useState(initialState);
+
+    const [enbBtn, setEnbBtn] = useState(false);
     
 
     const handleOnChange = (e) => {
         const {name, value} = e.target;
         setValues({...values, [name]: value});
+        if(values.name !== "" && values.phone !== "" && values.email !== ""){
+            //console.log("true");
+            setEnbBtn(true);
+        }else{
+            //console.log("false");
+            setEnbBtn(false);
+        }
     };
 
     const handleSubmit = (e) => {
@@ -35,7 +44,7 @@ const CheckOutForm = ({ addPurchaseInfo }) => {
                     <Form.Field>
                         <input placeholder='Your Email' onChange={handleOnChange} name='email' value={values.email}/>
                     </Form.Field>
-                    <Button type='submit' size="big" color="yellow">CONTINUE</Button>
+                    <Button disabled={enbBtn === false} active={enbBtn === true} type='submit' size="big" color="yellow">CONTINUE</Button>
                 </Form>
             </div>
         </div>

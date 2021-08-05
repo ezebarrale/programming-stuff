@@ -10,12 +10,7 @@ import { Link } from "react-router-dom";
 const cardStyles = {
   textAlign: "center",
   fontSize: 20,
-  padding: 20,
-};
-
-const contentStyles = {
-  height: "60px",
-  fontSize: "14px"
+  padding: 10,
 };
 
 function Item({ data }) {
@@ -26,16 +21,23 @@ function Item({ data }) {
   return (
     <div className="itemCard">
         <Card style={cardStyles}>
+
+        <Link to={`/item/${data.id}`}>
+          <div>
+            <Image className="img-card" src={data.img} width="250px" wrapped ui={false} />
+          </div>
           
-          <Image src={data.img} wrapped ui={false} />
           <Card.Content>
-          <Link to={`/item/${data.id}`}>
-            <Card.Header style={contentStyles}>{data.title}</Card.Header>
-          </Link>
-            <Card.Meta>
-              <span className="price">$ {data.price}</span>
+
+            <Card.Header className="header-card">{data.title}</Card.Header>
+
+            <Card.Meta className="price">
+              <span>$ {data.price}</span>
             </Card.Meta>
+            
           </Card.Content>
+
+        </Link>
 
           <Card.Content>
             <ItemCount onAdd={onAdd} stock={data.stock}/>

@@ -1,12 +1,10 @@
 import React, { useContext, useState } from 'react';
 import CheckOutC from '../../components/CheckOut/CheckOut';
 import { CartContext } from '../../context/CartContext';
-
 import { db } from '../../Firebase';
 import firebase from 'firebase/app';
+import "./CheckOut.css";
 
-let buyerT;
-let keyId;
 const CheckOut = () => {
     const { cart } = useContext(CartContext);
 
@@ -15,6 +13,12 @@ const CheckOut = () => {
 
     let variable = 1;
     const [cont, setCont] = useState(variable);
+
+    let buyer = 1;
+    const [buyerT, setBuyerT] = useState(buyer);
+
+    let key = 1;
+    const [keyId, setKeyId] = useState(key);
 
     const totalP = cart.reduce((ctotal, item) => {
         return item.price * item.quantity + ctotal;
@@ -25,7 +29,7 @@ const CheckOut = () => {
     });
 
     const addPurchaseInfo = (purchase) => {
-        buyerT = purchase;
+        setBuyerT(purchase);
         setCont(2);
     }
 
@@ -36,7 +40,7 @@ const CheckOut = () => {
             date: firebase.firestore.FieldValue.serverTimestamp(),
             total: totalP
         }).then((docRef) => {
-            keyId = docRef.id;
+            setKeyId(docRef.id);
             updateStock();
             setCont(3);
             clear();
@@ -56,11 +60,11 @@ const CheckOut = () => {
     }
 
     return ( 
-        <div>
+        <div>   
             <CheckOutC addPurchase = { addPurchase }
-                        addPurchaseInfo = { addPurchaseInfo }
-                        cont = { cont }
-                        keyId = { keyId }/>
+                addPurchaseInfo = { addPurchaseInfo }
+                cont = { cont }
+                keyId = { keyId }/>   
         </div>
     )
 }

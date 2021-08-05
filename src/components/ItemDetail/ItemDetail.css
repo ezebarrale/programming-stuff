@@ -1,0 +1,9 @@
+.non-product {
+    font-size: 30px;
+}
+
+.img-clm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

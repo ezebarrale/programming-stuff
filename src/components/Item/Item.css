@@ -18,3 +18,20 @@
 a:hover .header {
     color: grey;
 }
+
+.img-card {
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-width: 300px;
+}
+
+.header-card {
+    height: 60px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.price {
+    height: 40px;
+}

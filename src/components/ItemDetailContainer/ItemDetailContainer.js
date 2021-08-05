@@ -6,6 +6,9 @@ import Spinner from "../Spinner/Spinner.js";
 
 import { db } from "../../Firebase";
 
+import "./ItemDetailContainer.css";
+
+
 const ItemDetailContainer = ({ mtch }) => {
   const itemId = mtch.params.id;
   const [items, setItems] = useState();
@@ -13,12 +16,23 @@ const ItemDetailContainer = ({ mtch }) => {
   
   useEffect(() => {
     (async () => {
-      const response = await db.collection('articles').doc(itemId).get();
-      setItems({ id: response.id, ...response.data() });
+      await db.collection('articles').doc(itemId).get().then((doc)=>{
+        if(doc.exists){
+          //console.log("El articulo existe");
+          setItems({ id: doc.id, ...doc.data() });
+        }else{
+          //console.log("El articulo no existe");
+          setItems({});
+        }
+      });
+      //const response = await db.collection('articles').doc(itemId).get();
+      //console.log(response.id , response.data());
+      //setItems({ id: response.id, ...response.data() });
       setIsLoading(false);
     })()
+
   }, [itemId]);
-  
+
   /*
   useEffect(() => {
     axios(
@@ -27,8 +41,13 @@ const ItemDetailContainer = ({ mtch }) => {
     setIsLoading(false);
   }, [itemId]);
 */
-  return isLoading ? <Spinner /> : <ItemDetail data={items} />;
+  return(
 
+      <div className="itm-dtl-cont">
+        {isLoading ? <Spinner /> : <ItemDetail data={items} />}
+      </div>
+      
+    ) 
 };
 
 export default ItemDetailContainer;
